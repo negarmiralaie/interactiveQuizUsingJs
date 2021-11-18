@@ -27,8 +27,8 @@ table tr td {
   padding: 5px 0 10px 0;
 }
 
-table tr th svg,
-table tr td svg {
+table tr th img,
+table tr td img {
   margin-left: 2vw;
 }
 
