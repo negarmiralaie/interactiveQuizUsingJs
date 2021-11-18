@@ -36,15 +36,31 @@ table tr th {
   text-align: left;
 }
 
-table tr th::before {
-  content: "1. ";
-}
-
 table tr td {
   cursor: pointer;
 }
 
 table tbody tr:hover {
   background-color: #01143b;
+}
+
+.q1Table th::before {
+  content: "1. ";
+}
+
+.q2Table th::before {
+  content: "2. ";
+}
+
+.q3Table th::before {
+  content: "3. ";
+}
+
+.q4Table th::before {
+  content: "4. ";
+}
+
+.q5Table th::before {
+  content: "5. ";
 }
 /*# sourceMappingURL=style.css.map */

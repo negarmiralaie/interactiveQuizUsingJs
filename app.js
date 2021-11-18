@@ -1,4 +1,6 @@
 let allTbodyRow = document.querySelectorAll("tbody tr");
+
+// when an answer row is clicked, its icons changes to green  checked circle
 Array.from(allTbodyRow).forEach(function (eachTbodyRow) {
   eachTbodyRow.addEventListener("click", (e) => {
     radioIconSrc = eachTbodyRow.querySelector(".radioIcon").src;
