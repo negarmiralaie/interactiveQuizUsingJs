@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main {
+  padding: 1.5rem;
+}
+
+table {
+  width: 80vw;
+  margin-top: 2rem;
+  border-collapse: separate;
+  border-spacing: 0px;
+}
+
+table tr {
+  -webkit-box-shadow: 0px 1px 0px 0px #a3a3a3;
+          box-shadow: 0px 1px 0px 0px #a3a3a3;
+  z-index: 100;
+}
+
+table tr th,
+table tr td {
+  padding: 5px 0 10px 0;
+}
+
+table tr th svg,
+table tr td svg {
+  margin-left: 2vw;
+}
+
+table tr th {
+  text-align: left;
+}
+
+table tr th::before {
+  content: "1. ";
+}
+
+table tr td {
+  cursor: pointer;
+}
+
+table tbody tr:hover {
+  background-color: #01143b;
+}
+/*# sourceMappingURL=style.css.map */

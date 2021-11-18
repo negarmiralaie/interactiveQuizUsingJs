@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    padding: 1.5rem;
+}
+
+table {
+    width: 80vw;
+    margin-top: 2rem;
+    border-collapse: separate;
+    border-spacing: 0px;
+
+    tr {
+        box-shadow: 0px 1px 0px 0px #a3a3a3;
+        z-index: 100;
+
+        th,
+        td {
+            padding: 5px 0 10px 0;
+
+            svg {
+                margin-left: 2vw;
+            }
+        }
+
+        th {
+            text-align: left;
+        }
+
+        th::before {
+            content: "1. ";
+        }
+
+        td {
+            cursor: pointer;
+        }
+
+    }
+
+    tbody tr:hover {
+        background-color: #01143b;
+    }
+
+}
