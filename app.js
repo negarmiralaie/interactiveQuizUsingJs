@@ -1,16 +1,23 @@
-let allTbodyRow = document.querySelectorAll("tbody tr");
+const body = document.body;
+let main = document.querySelector("main");
+const qRowClasses = [".q1Table", ".q2Table", ".q3Table", ".q4Table", ".q5Table"];
 
-// when an answer row is clicked, its icons changes to green  checked circle
-Array.from(allTbodyRow).forEach(function (eachTbodyRow) {
-  eachTbodyRow.addEventListener("click", (e) => {
-    radioIconSrc = eachTbodyRow.querySelector(".radioIcon").src;
-    indexOfSelected = indexOfSelectedAnswer(allTbodyRow);
-    if (indexOfSelected <= allTbodyRow.length) {
-      toggleRadioIcon(allTbodyRow[indexOfSelected]);
-    }
-    toggleRadioIcon(eachTbodyRow);
+for (i = 0; i < qRowClasses.length; i++) {
+  let row = main.querySelector(qRowClasses[i]);
+  let allTbodyRow = row.querySelectorAll("tbody tr");
+
+  // when an answer row is clicked, its icons changes to green  checked circle
+  Array.from(allTbodyRow).forEach(function (eachTbodyRow) {
+    eachTbodyRow.addEventListener("click", (e) => {
+      radioIconSrc = eachTbodyRow.querySelector(".radioIcon").src;
+      indexOfSelected = indexOfSelectedAnswer(allTbodyRow);
+      if (indexOfSelected <= allTbodyRow.length) {
+        toggleRadioIcon(allTbodyRow[indexOfSelected]);
+      }
+      toggleRadioIcon(eachTbodyRow);
+    });
   });
-});
+}
 
 function toggleRadioIcon(eachTbodyRow) {
   if (eachTbodyRow.querySelector(".radioIcon").src.includes("grayCircle")) {
