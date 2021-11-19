@@ -60,6 +60,7 @@ form.addEventListener("submit", (e) => {
     submitBtn.addEventListener("click", (e) => {
         result.classList.toggle("hideScore");
         result.classList.toggle("showScore");
+        scrollTo(0,0);
         let output = 0;
         let userScore = countScore();
         const score = userScore;
