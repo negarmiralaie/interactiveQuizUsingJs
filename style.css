@@ -86,8 +86,8 @@ form section input[type="submit"] {
 }
 
 form section input[type="submit"]:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
 }
 
 .result {
