@@ -1,18 +1,38 @@
 const body = document.body;
 let main = document.querySelector("main");
-const qRowClasses = [".q1Table", ".q2Table", ".q3Table", ".q4Table", ".q5Table"];
-let userAnswers = [
-  { qno: 0, ans: 0 },
-  { qno: 1, ans: 0 },
-  { qno: 2, ans: 0 },
-  { qno: 3, ans: 0 },
-  { qno: 4, ans: 0 },
+const qRowClasses = [
+    ".q1Table",
+    ".q2Table",
+    ".q3Table",
+    ".q4Table",
+    ".q5Table",
+];
+let userAnswers = [{
+        qno: 0,
+        ans: 0,
+    },
+    {
+        qno: 1,
+        ans: 0,
+    },
+    {
+        qno: 2,
+        ans: 0,
+    },
+    {
+        qno: 3,
+        ans: 0,
+    },
+    {
+        qno: 4,
+        ans: 0,
+    },
 ];
 
 for (i = 0; i < qRowClasses.length; i++) {
     let row = main.querySelector(qRowClasses[i]);
     let allTbodyRow = row.querySelectorAll("tbody tr");
-    let qNo=i;
+    let qNo = i;
 
     // when an answer row is clicked, its icons changes to green  checked circle
     Array.from(allTbodyRow).forEach(function (eachTbodyRow) {
@@ -28,6 +48,26 @@ for (i = 0; i < qRowClasses.length; i++) {
         });
     });
 }
+
+// start counting and showing score
+const form = document.querySelector(".quizForm");
+const result = document.querySelector(".result");
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const submitBtn = document.querySelector(".submitFormBtn");
+
+    submitBtn.addEventListener("click", (e) => {
+        console.log(111);
+        result.querySelector("span").textContent = `${countScore()}`;
+        result.classList.toggle("hideScore");
+        result.classList.toggle("showScore");
+        console.log(result);
+    });
+
+});
+
+let score = 0;
 
 function toggleRadioIcon(eachTbodyRow) {
     if (eachTbodyRow.querySelector(".radioIcon").src.includes("grayCircle")) {
@@ -49,3 +89,11 @@ function indexOfSelectedAnswer(allTbodyRow) {
         }
     }
 }
+
+function countScore() {
+    score = 0;
+    for (i = 0; i < 5; i++) {
+        score += userAnswers[i].ans;
+    }
+    return score;
+};

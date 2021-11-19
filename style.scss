@@ -9,7 +9,7 @@ main {
 }
 
 table {
-    width: 80vw;
+    width: 90vw;
     margin-top: 2rem;
     border-collapse: separate;
     border-spacing: 0px;
@@ -34,7 +34,6 @@ table {
         td {
             cursor: pointer;
         }
-
     }
 
     tbody tr:hover {
@@ -60,4 +59,44 @@ table {
 
 .q5Table th::before {
     content: "5. ";
+}
+
+form section {
+    display: flex;
+
+    input[type="submit"] {
+        width: 20%;
+        background-color: #84ce7b;
+        padding: 10px 30px;
+        border-radius: 10px;
+        border: none;
+        margin: 2rem 0;
+    }
+}
+.result{
+    font-weight: bold;
+    font-size: 2em;
+    margin-top: 2rem;
+}
+
+.hideScore{
+    display: none;;
+}
+
+.showScore{
+    display: block;
+}
+
+@media screen and(min-width: 1024px) {
+    form section input[type="submit"] {
+        width: 100%;
+        margin-left: auto;
+    }
+}
+
+@media screen and(max-width: 768px) {
+    form section input[type="submit"] {
+        width: 100%;
+        margin: 2rem auto;
+    }
 }
