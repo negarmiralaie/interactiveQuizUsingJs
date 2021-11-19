@@ -1,3 +1,7 @@
+:root {
+  --myGreen: #84ce7b;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -72,7 +76,7 @@ form section {
 
 form section input[type="submit"] {
   width: 20%;
-  background-color: #84ce7b;
+  background-color: var(--myGreen);
   padding: 10px 30px;
   border-radius: 10px;
   border: none;
@@ -91,6 +95,8 @@ form section input[type="submit"] {
 
 .showScore {
   display: block;
+  text-align: center;
+  color: var(--myGreen);
 }
 
 @media screen and (min-width: 1024px) {
