@@ -9,13 +9,18 @@
     box-sizing: border-box;
 }
 
-main {
-    padding: 1.5rem;
+h2{
+    padding: 2rem 0 1rem 2rem;
+}
+
+h4{
+    padding-left: 2rem;
 }
 
 table {
-    width: 90vw;
+    width: 100vw;
     margin-top: 2rem;
+    padding: 0 2rem;
     border-collapse: separate;
     border-spacing: 0px;
 
@@ -42,7 +47,7 @@ table {
     }
 
     tbody tr:hover {
-        background-color: #01143b;
+        background-color: #7fa5f3;
     }
 }
 
