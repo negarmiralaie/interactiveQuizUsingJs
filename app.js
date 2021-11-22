@@ -56,14 +56,15 @@ const result = document.querySelector(".result");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     const submitBtn = document.querySelector(".submitFormBtn");
-
     submitBtn.addEventListener("click", (e) => {
-        result.classList.toggle("hideScore");
+        console.log(111111);
         result.classList.toggle("showScore");
-        scrollTo(0,0);
+        result.classList.toggle("hideScore");
+        scrollTo(0, 0);
         let output = 0;
         let userScore = countScore();
         const score = userScore;
+        
         const timer = setInterval((userScore) => {
             if (output === score * 10) {
                 clearInterval(timer);
