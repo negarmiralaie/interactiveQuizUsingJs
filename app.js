@@ -56,24 +56,21 @@ const result = document.querySelector(".result");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     const submitBtn = document.querySelector(".submitFormBtn");
-    submitBtn.addEventListener("click", (e) => {
-        console.log(111111);
-        result.classList.toggle("showScore");
-        result.classList.toggle("hideScore");
-        scrollTo(0, 0);
-        let output = 0;
-        let userScore = countScore();
-        const score = userScore;
-        
-        const timer = setInterval((userScore) => {
-            if (output === score * 10) {
-                clearInterval(timer);
-            } else {
-                output++;
-                result.querySelector("span").textContent = `${output}`;
-            }
-        }, 10);
-    });
+    result.classList.toggle("showScore");
+    result.classList.toggle("hideScore");
+    scrollTo(0, 0);
+    let output = 0;
+    let userScore = countScore();
+    const score = userScore;
+
+    const timer = setInterval((userScore) => {
+        if (output === score * 10) {
+            clearInterval(timer);
+        } else {
+            output++;
+            result.querySelector("span").textContent = `${output}`;
+        }
+    }, 10);
 });
 
 function toggleRadioIcon(eachTbodyRow) {
@@ -96,7 +93,6 @@ function indexOfSelectedAnswer(allTbodyRow) {
         }
     }
 }
-
 
 function countScore() {
     let score = 0;
